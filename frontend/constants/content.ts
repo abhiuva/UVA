@@ -1,7 +1,7 @@
 export const CONTENT = {
   hero: {
-    headline: "Intelligent Platforms for Commerce, Enterprise AI, and Robotics",
-    subheadline: "UVA builds AI-native platforms that help businesses transform commerce, automate enterprise operations, and bring intelligence into the physical world.",
+    headline: "Engineering the Future of Intelligence",
+    subheadline: "We engineer intelligent products that transform ideas into AI-powered platforms, autonomous agents, and robotics helping businesses innovate faster, operate smarter, and lead the future.",
     ctaPrimary: "Explore Our Products",
     ctaSecondary: "Contact Us",
   },
