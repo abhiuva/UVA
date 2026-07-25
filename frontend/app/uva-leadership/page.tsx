@@ -34,28 +34,12 @@ export default function LeadershipPage() {
     <main className="min-h-screen bg-background text-foreground flex flex-col selection:bg-foreground selection:text-background">
       <Navbar />
 
-      {/* Hero Video Section (Vision & Mission) */}
-      <SectionWrapper className="relative min-h-[100vh] flex items-center justify-center pt-32 pb-20 overflow-hidden text-background">
-        {/* Background Video */}
-        <div className="absolute inset-0 z-0">
-          <video 
-            autoPlay 
-            loop 
-            muted 
-            playsInline 
-            className="w-full h-full object-cover"
-            poster="https://images.pexels.com/videos/3209829/free-video-3209829.jpg?auto=compress&cs=tinysrgb&fit=crop&h=630&w=1200"
-          >
-            <source src="https://videos.pexels.com/video-files/3209829/3209829-uhd_3840_2160_25fps.mp4" type="video/mp4" />
-          </video>
-          {/* Overlay */}
-          <div className="absolute inset-0 bg-foreground/30" />
-        </div>
-
+      {/* Hero Section (Vision & Mission) */}
+      <SectionWrapper className="relative min-h-[100vh] flex items-center justify-center pt-32 pb-20 overflow-hidden text-white">
         <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 w-full">
           {/* Title */}
           <div className="text-center mb-16 reveal-item">
-            <h1 className="font-heading text-4xl md:text-6xl font-extrabold uppercase tracking-wide leading-tight">
+            <h1 className="font-heading text-4xl md:text-6xl font-extrabold uppercase tracking-wide leading-tight text-white">
               {mission.headline}
             </h1>
             <div className="w-24 h-1 bg-[#28C3DB] mx-auto mt-6"></div>
@@ -68,7 +52,7 @@ export default function LeadershipPage() {
               <h2 className="font-heading text-xl md:text-2xl font-bold text-[#28C3DB] uppercase tracking-wider mb-4">
                 Empowering Change
               </h2>
-              <p className="font-body text-base md:text-lg text-background/90 leading-relaxed font-light">
+              <p className="font-body text-base md:text-lg text-white/90 leading-relaxed font-light">
                 {hero.description}
               </p>
             </div>
@@ -78,16 +62,16 @@ export default function LeadershipPage() {
               <h2 className="font-heading text-xl md:text-2xl font-bold text-[#28C3DB] uppercase tracking-wider mb-4">
                 Inspiring Collective Action
               </h2>
-              <p className="font-body text-base md:text-lg text-background/90 leading-relaxed font-light">
+              <p className="font-body text-base md:text-lg text-white/90 leading-relaxed font-light">
                 {mission.description}
               </p>
             </div>
           </div>
 
           {/* Quote Block (Glassmorphic) */}
-          <div className="reveal-item max-w-4xl mx-auto bg-background/5 backdrop-blur-md border border-background/10 p-8 rounded-3xl relative text-center">
-            <Quote className="absolute top-4 left-4 w-10 h-10 text-background/10" />
-            <p className="font-body text-lg md:text-xl italic font-light leading-relaxed text-background/90">
+          <div className="reveal-item max-w-4xl mx-auto bg-white/5 backdrop-blur-md border border-white/10 p-8 rounded-3xl relative text-center">
+            <Quote className="absolute top-4 left-4 w-10 h-10 text-white/20" />
+            <p className="font-body text-lg md:text-xl italic font-light leading-relaxed text-white/90">
               {mission.quote}
             </p>
           </div>
@@ -96,7 +80,7 @@ export default function LeadershipPage() {
 
       {/* Team Section */}
       <section className="bg-background text-foreground py-24">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
             {team.map((member, index) => (
               <div 
@@ -106,20 +90,20 @@ export default function LeadershipPage() {
               >
                 <div className="p-10 flex flex-col grow items-center text-center">
                   <div className="w-24 h-24 rounded-full bg-foreground/10 mb-6 flex items-center justify-center">
-                    <span className="font-heading text-3xl font-bold uppercase text-foreground">
+                    <span className="font-heading text-3xl font-bold uppercase text-white">
                       {member.name.split(' ').map(n => n[0]).join('')}
                     </span>
                   </div>
                   
-                  <h3 className="font-heading text-2xl font-bold uppercase tracking-wide mb-2">
+                  <h3 className="font-heading text-2xl font-bold uppercase tracking-wide mb-2 text-white">
                     {member.name}
                   </h3>
-                  <p className="font-body text-sm font-bold tracking-widest uppercase text-muted mb-6">
+                  <p className="font-body text-sm font-bold tracking-widest uppercase text-white/70 mb-6">
                     {member.role}
                   </p>
                   
                   <div className="grow flex items-center justify-center mb-8">
-                    <p className="font-body text-lg italic text-foreground/80">
+                    <p className="font-body text-lg italic text-white/90">
                       {member.quote}
                     </p>
                   </div>
@@ -129,14 +113,14 @@ export default function LeadershipPage() {
                       href={member.linkedin} 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="w-10 h-10 rounded-full bg-foreground/5 flex items-center justify-center hover:bg-foreground hover:text-background transition-colors"
+                      className="w-10 h-10 rounded-full bg-foreground/5 flex items-center justify-center hover:bg-foreground hover:text-background transition-colors text-white"
                       aria-label={`${member.name} LinkedIn`}
                     >
                       <Linkedin className="w-5 h-5" />
                     </a>
                     <a 
                       href={member.email} 
-                      className="w-10 h-10 rounded-full bg-foreground/5 flex items-center justify-center hover:bg-foreground hover:text-background transition-colors"
+                      className="w-10 h-10 rounded-full bg-foreground/5 flex items-center justify-center hover:bg-foreground hover:text-background transition-colors text-white"
                       aria-label={`Email ${member.name}`}
                     >
                       <Mail className="w-5 h-5" />

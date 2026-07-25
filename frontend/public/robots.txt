@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+Disallow: /admin/
+Disallow: /api/private/
+Disallow: /internal/
+Disallow: /staging/
+Disallow: /preview/
+
+Sitemap: https://uvaproit.com/sitemap.xml

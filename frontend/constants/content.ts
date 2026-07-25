@@ -1,7 +1,7 @@
 export const CONTENT = {
   hero: {
-    headline: "Engineering the Future of Intelligence",
-    subheadline: "We engineer intelligent products that transform ideas into AI-powered platforms, autonomous agents, and robotics helping businesses innovate faster, operate smarter, and lead the future.",
+    headline: "Intelligent Platforms for Commerce, Enterprise AI, and Robotics",
+    subheadline: "UVA builds AI-native platforms that help businesses transform commerce, automate enterprise operations, and bring intelligence into the physical world.",
     ctaPrimary: "Explore Our Products",
     ctaSecondary: "Contact Us",
   },
@@ -203,21 +203,21 @@ export const CONTENT = {
     team: [
       {
         name: "Ushaswini Verma",
-        role: "Co-Founder, Director, Head of Operations",
+        role: "Director",
         quote: "\"Peace Begins with Smile\"",
         linkedin: "https://www.linkedin.com/in/ushaswini-verma-mupparapu-879026302/",
         email: "mailto:ushaswini_mupparapu@uvaproit.com"
       },
       {
         name: "Abhishek Kola",
-        role: "Co-Founder, Director, Head of Data Analytics & AI",
+        role: "Director, Head of Products & Innovations",
         quote: "\"Yad Bhavam, Tad Bhavathi\"",
         linkedin: "https://www.linkedin.com/in/abhishek-kola-ak/",
         email: "mailto:abhishek_kola@uvaproit.com"
       },
       {
         name: "Vishal Verma",
-        role: "Co-Founder, Director, Head of Embedded Services",
+        role: "Director, Head of Operations ",
         quote: "\"As a Man Thinketh — So is he\"",
         linkedin: "https://www.linkedin.com/in/vishal-verma-mupparapu-955a92270/",
         email: "mailto:vishal_verma@uvaproit.com"

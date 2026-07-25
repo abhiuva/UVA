@@ -27,37 +27,129 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://uvaproit.com"),
   title: {
-    template: "%s | UVA Tech Services",
-    default: "UVA Tech Services | Dynamic Startup for Technology Solutions",
+    template: "%s | UVA",
+    default: "UVA | AI Commerce, Agentic AI and Robotics Platforms",
   },
-  description: "UVA is a dynamic startup that delivers cutting-edge technology solutions. Our seasoned professionals are dedicated to empowering businesses.",
-  keywords: ["technology solutions", "data analytics", "AI", "embedded solutions", "cybersecurity", "web development"],
-  authors: [{ name: "UVA Product and IT Services Limited", url: "https://www.uvaproit.com" }],
-  metadataBase: new URL("https://www.uvaproit.com"),
-  openGraph: {
-    type: "website",
-    locale: "en_US",
-    url: "https://www.uvaproit.com",
-    siteName: "UVA Tech Services",
-    title: "UVA Tech Services | Technology Solutions",
-    description: "UVA is a dynamic startup that delivers cutting-edge technology solutions. Our seasoned professionals are dedicated to empowering businesses and driving meaningful change.",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "UVA Tech Services" }],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "UVA Tech Services",
-    description: "UVA is a dynamic startup that delivers cutting-edge technology solutions.",
-    images: ["/og-image.png"],
-  },
+  description:
+    "UVA builds intelligent platforms for AI-powered commerce, enterprise automation and robotics through DP360, Pardha and AURA.",
   robots: {
     index: true,
     follow: true,
-    googleBot: { index: true, follow: true, "max-image-preview": "large" },
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
   },
   alternates: {
-    canonical: "https://uvaproit.in",
+    canonical: "https://uvaproit.com/",
   },
+  openGraph: {
+    type: "website",
+    siteName: "UVA",
+    title: "UVA | Intelligent Platforms for e-commerce, AI and Robotics",
+    description:
+      "Discover DP360 for intelligent e-commerce, Pardha for enterprise AI agents and AURA for human-centric robotics.",
+    url: "https://uvaproit.com/",
+    locale: "en_GB",
+    images: [
+      {
+        url: "https://uvaproit.com/images/social/uva-og-cover.jpg",
+        width: 1200,
+        height: 630,
+        alt: "UVA intelligent product platforms: DP360, Pardha and AURA",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "UVA | AI Commerce, Agentic AI and Robotics",
+    description:
+      "Intelligent product platforms for commerce, enterprise automation and robotics.",
+    images: ["https://uvaproit.com/images/social/uva-og-cover.jpg"],
+  },
+};
+
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://uvaproit.com/#organization",
+  name: "UVA Product & IT Services",
+  alternateName: "UVA",
+  url: "https://uvaproit.com/",
+  logo: {
+    "@type": "ImageObject",
+    url: "https://uvaproit.com/logo.png",
+    width: 512,
+    height: 512,
+  },
+  image: "https://uvaproit.com/images/social/uva-og-cover.jpg",
+  description:
+    "UVA develops AI-native platforms for commerce, enterprise automation and intelligent robotics.",
+  email: "mailto:enquiries@uvaproit.com",
+  sameAs: [
+    "https://www.linkedin.com/in/abhishek-kola-ak/",
+    "https://www.linkedin.com/in/ushaswini-verma-mupparapu-879026302/",
+    "https://www.linkedin.com/in/vishal-verma-mupparapu-955a92270/",
+  ],
+  knowsAbout: [
+    "Artificial Intelligence",
+    "Agentic AI",
+    "Digital Commerce",
+    "Retail Technology",
+    "Business Intelligence",
+    "Enterprise Automation",
+    "Robotics",
+    "Computer Vision",
+  ],
+};
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://uvaproit.com/#website",
+  url: "https://uvaproit.com/",
+  name: "UVA",
+  alternateName: "UVA Product & IT Services",
+  description:
+    "Intelligent platforms for AI-powered commerce, enterprise automation and robotics.",
+  publisher: {
+    "@id": "https://uvaproit.com/#organization",
+  },
+  inLanguage: "en-GB",
+};
+
+const productCollectionSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "UVA Intelligent Product Platforms",
+  description:
+    "AI-native product platforms for commerce, enterprise automation and robotics.",
+  numberOfItems: 3,
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      url: "https://uvaproit.com/product/dp360",
+      name: "DP360",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      url: "https://uvaproit.com/product/pardha",
+      name: "Pardha",
+    },
+    {
+      "@type": "ListItem",
+      position: 3,
+      url: "https://uvaproit.com/product/aura",
+      name: "AURA",
+    },
+  ],
 };
 
 export default function RootLayout({
@@ -67,6 +159,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${montserrat.variable} ${roboto.variable} ${jetbrainsMono.variable}`}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(productCollectionSchema) }}
+        />
+      </head>
       <body className="antialiased flex flex-col min-h-screen bg-background text-foreground font-body">
         <Navbar />
         {children}

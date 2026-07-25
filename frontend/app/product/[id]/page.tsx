@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { ComponentType, CSSProperties } from "react";
-import type { Metadata } from "next";
 import {
   ArrowLeft,
   ArrowRight,
@@ -68,23 +67,6 @@ export function generateStaticParams() {
   }));
 }
 
-export async function generateMetadata({
-  params,
-}: ProductPageProps): Promise<Metadata> {
-  const { id } = await params;
-  const product = getProduct(id);
-
-  if (!product) {
-    return {
-      title: "Product Not Found",
-    };
-  }
-
-  return {
-    title: `${product.name} | UVA Products`,
-    description: product.thesis,
-  };
-}
 
 export default async function ProductDetailPage({ params }: ProductPageProps) {
   const { id } = await params;
@@ -96,11 +78,131 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
 
   const relatedProducts = products.filter((item) => item.id !== product.id);
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://uvaproit.com/",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Products",
+        item: "https://uvaproit.com/#products",
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: product.name,
+        item: `https://uvaproit.com/product/${product.id}`,
+      },
+    ],
+  };
+
+  let productSchema: object | null = null;
+
+  if (product.id === "dp360") {
+    productSchema = {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "@id": "https://uvaproit.com/product/dp360/#software",
+      name: "DP360",
+      url: "https://uvaproit.com/product/dp360",
+      image: "https://uvaproit.com/images/products/dp360/dp360-platform.jpg",
+      description:
+        "DP360 is an AI-powered commerce and retail intelligence platform covering e-commerce, POS, inventory, procurement, CRM, payments, logistics and business intelligence.",
+      applicationCategory: "BusinessApplication",
+      applicationSubCategory: "Commerce and Retail Management Platform",
+      operatingSystem: "Web",
+      isAccessibleForFree: false,
+      publisher: {
+        "@id": "https://uvaproit.com/#organization",
+      },
+      featureList: product.capabilities,
+    };
+  } else if (product.id === "pardha") {
+    productSchema = {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "@id": "https://uvaproit.com/product/pardha/#software",
+      name: "Pardha",
+      url: "https://uvaproit.com/product/pardha",
+      image: "https://uvaproit.com/images/products/pardha/pardha-platform.jpg",
+      description:
+        "Pardha is an enterprise Agentic AI Operating System that orchestrates collaborative AI agents, enterprise knowledge, workflow automation and intelligent decision support.",
+      applicationCategory: "BusinessApplication",
+      applicationSubCategory: "Agentic AI and Enterprise Automation Platform",
+      operatingSystem: "Web",
+      isAccessibleForFree: false,
+      publisher: {
+        "@id": "https://uvaproit.com/#organization",
+      },
+      featureList: product.capabilities,
+    };
+  } else if (product.id === "aura") {
+    productSchema = {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "@id": "https://uvaproit.com/product/aura/#product",
+      name: "AURA",
+      url: "https://uvaproit.com/product/aura",
+      image: [
+        "https://uvaproit.com/images/products/aura/aura-robotics-platform.jpg",
+      ],
+      description:
+        "AURA is UVA's modular intelligent robotics platform combining artificial intelligence, computer vision, autonomous mobility, voice interaction, embedded systems and cloud intelligence.",
+      brand: {
+        "@type": "Brand",
+        name: "UVA",
+      },
+      manufacturer: {
+        "@id": "https://uvaproit.com/#organization",
+      },
+      category: "Intelligent Robotics Platform",
+      additionalProperty: [
+        {
+          "@type": "PropertyValue",
+          name: "AI Vision",
+          value: "Computer vision, face recognition and environment awareness",
+        },
+        {
+          "@type": "PropertyValue",
+          name: "Interaction",
+          value: "Voice interaction and conversational AI",
+        },
+        {
+          "@type": "PropertyValue",
+          name: "Mobility",
+          value: "Autonomous navigation and intelligent movement",
+        },
+        {
+          "@type": "PropertyValue",
+          name: "Connectivity",
+          value: "Cloud intelligence, remote monitoring and OTA updates",
+        },
+      ],
+    };
+  }
+
   return (
     <main
       className="relative min-h-screen bg-background text-foreground selection:bg-foreground selection:text-background overflow-hidden"
       style={productStyle(product)}
     >
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      {productSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
+        />
+      )}
       {/* Background Signal Waveform matching Home Page */}
       <div className="pointer-events-none absolute inset-0 z-0 flex items-center justify-center opacity-15 overflow-hidden">
         <SignalWaveform
