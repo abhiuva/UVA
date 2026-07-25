@@ -98,10 +98,19 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
 
   return (
     <main
-      className="min-h-screen bg-background text-foreground selection:bg-foreground selection:text-background"
+      className="relative min-h-screen bg-background text-foreground selection:bg-foreground selection:text-background overflow-hidden"
       style={productStyle(product)}
     >
-      <SectionWrapper className="pt-36 pb-20 md:pt-44 md:pb-28">
+      {/* Background Signal Waveform matching Home Page */}
+      <div className="pointer-events-none absolute inset-0 z-0 flex items-center justify-center opacity-15 overflow-hidden">
+        <SignalWaveform
+          variant={product.signal}
+          color={product.accent}
+          className="!h-full !w-full !min-h-0 !scale-[2] !rounded-none !border-none !bg-transparent"
+        />
+      </div>
+
+      <SectionWrapper className="relative z-10 pt-36 pb-20 md:pt-44 md:pb-28">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[0.92fr_1.08fr] lg:gap-16">
           <div className="reveal-item">
             <div className="inline-flex items-center gap-2 rounded-full bg-[var(--accent)] px-4 py-1.5 shadow-md mb-4">
@@ -160,7 +169,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
         </div>
       </SectionWrapper>
 
-      <SectionWrapper className="border-y border-foreground/10 py-20 md:py-24">
+      <SectionWrapper className="relative z-10 border-y border-foreground/10 py-20 md:py-24">
         <div className="mb-10 flex max-w-3xl flex-col items-start gap-3">
           <div className="inline-flex items-center gap-2 rounded-full bg-[var(--accent)] px-4 py-1.5 shadow-md">
             <span className="h-2 w-2 rounded-full bg-white animate-pulse" />
@@ -198,7 +207,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
       </SectionWrapper>
 
       {product.solutions && product.solutions.length > 0 && (
-        <SectionWrapper className="border-b border-foreground/10 pb-20 md:pb-24">
+        <SectionWrapper className="relative z-10 border-b border-foreground/10 pb-20 md:pb-24">
           <div className="mb-10 max-w-3xl">
             <div className="inline-flex items-center gap-2 rounded-full bg-[var(--accent)] px-4 py-1.5 shadow-md mb-3">
               <span className="h-2 w-2 rounded-full bg-white animate-pulse" />
@@ -245,7 +254,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
         </SectionWrapper>
       )}
 
-      <SectionWrapper className="py-20 md:py-24">
+      <SectionWrapper className="relative z-10 py-20 md:py-24">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-[0.38fr_0.62fr]">
           <div>
             <div className="inline-flex items-center gap-2 rounded-full bg-[var(--accent)] px-4 py-1.5 shadow-md mb-3">
@@ -293,7 +302,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
         )}
       </SectionWrapper>
 
-      <SectionWrapper className="border-y border-foreground/10 py-20 md:py-24">
+      <SectionWrapper className="relative z-10 border-y border-foreground/10 py-20 md:py-24">
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-[0.44fr_0.56fr]">
           <div>
             <div className="inline-flex items-center gap-2 rounded-full bg-[var(--accent)] px-4 py-1.5 shadow-md mb-3">
@@ -319,7 +328,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
         </div>
       </SectionWrapper>
 
-      <SectionWrapper className="py-20 md:py-24">
+      <SectionWrapper className="relative z-10 py-20 md:py-24">
         <div className="mb-10 max-w-3xl">
           <div className="inline-flex items-center gap-2 rounded-full bg-[var(--accent)] px-4 py-1.5 shadow-md mb-3">
             <span className="h-2 w-2 rounded-full bg-white animate-pulse" />

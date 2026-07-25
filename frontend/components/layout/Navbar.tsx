@@ -182,7 +182,7 @@ export function Navbar() {
               );
             })}
             <Link href="/#contact-us" onClick={() => setMobileMenuOpen(false)} className="w-full mt-4 block">
-              <Button variant="primary" size="md" className="w-full bg-black text-white hover:bg-zinc-800 hover:text-white hover:border-2 hover:border-zinc-800 font-bold shadow-md">
+              <Button variant="primary" size="md" className="w-full bg-black text-white hover:bg-zinc-800 hover:text-white border-2 hover:border-2 hover:border-zinc-800 font-bold shadow-md">
                 Get in touch
               </Button>
             </Link>

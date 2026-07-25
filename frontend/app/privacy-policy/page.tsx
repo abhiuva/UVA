@@ -21,6 +21,11 @@ export default function PrivacyPolicyPage() {
             <h1 className="font-heading text-4xl md:text-5xl font-extrabold uppercase tracking-wide mb-4">
               {title}
             </h1>
+            {CONTENT.privacyPolicy.lastUpdated && (
+              <p className="font-mono text-sm font-semibold tracking-wider uppercase text-foreground/60 mb-4">
+                Last updated: {CONTENT.privacyPolicy.lastUpdated}
+              </p>
+            )}
             <div className="w-20 h-1 bg-foreground"></div>
           </div>
 

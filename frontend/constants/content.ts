@@ -267,111 +267,237 @@ export const CONTENT = {
   },
   privacyPolicy: {
     title: "Privacy Policy",
+    lastUpdated: "24 July 2026",
     intro: [
-      "www.uvatechservices.com website is owned by UVA Product and IT Services Limited, which is a data controller of your personal data.",
-      "We have adopted this Privacy Policy, which determines how we are processing the information collected by www.uvatechservices.com, which also provides the reasons why we must collect certain personal data about you. Therefore, you must read this Privacy Policy before using www.uvatechservices.com website.",
-      "We take care of your personal data and undertake to guarantee its confidentiality and security."
+      "This website, uvaproit.com, is operated by UVA Product and IT Services Limited, a company registered in the United Kingdom.",
+      "UVA Product and IT Services Limited is the data controller responsible for personal information collected through this website.",
+      "Our affiliated company and authorised team in India may access limited personal information to assist with enquiries, product discussions and business operations."
     ],
     sections: [
       {
-        heading: "Personal information we collect",
-        paragraphs: ["We may collect the following personal information when you voluntarily submit it through:"],
-        bullets: [
-          "Contact Forms: Name, email address, and message",
-          "Newsletter/Subscription Forms: Email address"
+        heading: "Who We Are",
+        paragraphs: [
+          "UK entity: UVA Product and IT Services Limited (Company number: 15807431, Registered office: Park House, 37 Clarence Street, Leicester, Leicestershire, England, LE1 3RW)",
+          "India entity: UVA Product and IT Service IND PVT LTD (Registered office: Hanamkonda, Warangal, Telangana, India, 506001)",
+          "Contact: enquiries@uvaproit.com"
         ]
       },
       {
-        heading: "How We Use Your Information",
-        paragraphs: ["We use the information you provide to:"],
+        heading: "Information We Collect",
+        paragraphs: ["We may collect information that you provide through our website, including:"],
         bullets: [
-          "Respond to your enquiries",
-          "Contact you regarding our products, services, or careers",
-          "Send updates or notifications (if subscribed)"
+          "Name",
+          "Email address",
+          "Telephone number",
+          "Company and job title",
+          "Product or business interests",
+          "Information included in your enquiry",
+          "Newsletter preferences, where applicable"
         ],
-        footer: "We do not share your data with third parties. The data is only used by our internal team for the purposes mentioned above. You can visit the website without telling us who you are or revealing any information, by which someone could identify you as a specific, identifiable individual. If, however, you wish to use some of the website’s features, or you wish to receive our newsletter or provide other details by filling a form, you may provide personal data to us, such as your email, first name, last name, city of residence, organization, telephone number. You can choose not to provide us with your personal data, but then you may not be able to take advantage of some of the website’s features. For example, you won’t be able to receive our Newsletter or contact us directly from the website. Users who are uncertain about what information is mandatory are welcome to contact us via enquiries@uvaproit.com."
+        footer: "Our website and hosting systems may also process limited technical information, including IP addresses, browser information and security logs."
       },
       {
-        heading: "Your Rights",
-        paragraphs: ["If you are located in the UK or EU, you have the right to:"],
+        heading: "How We Use Your Information",
+        paragraphs: ["We use personal information to:"],
         bullets: [
-          "Access the data we hold about you",
-          "Request correction or deletion of your data",
-          "Withdraw your consent at any time"
+          "Respond to enquiries",
+          "Arrange product demonstrations and meetings",
+          "Provide information about DP360, Pardha, AURA and other UVA products",
+          "Manage prospective customer, partner and supplier relationships",
+          "Send marketing communications where you have consented or where otherwise permitted",
+          "Operate, maintain and protect our website",
+          "Comply with legal obligations"
         ],
-        footer: "To make such a request, please contact us via the email you originally used to communicate with us."
+        footer: "We process information based on legitimate business interests, your consent, steps requested before entering into a contract, performance of a contract, or compliance with legal obligations."
+      },
+      {
+        heading: "Sharing and International Access",
+        paragraphs: [
+          "We do not sell personal information.",
+          "We may share information with authorised employees, our affiliated India entity and service providers that support website hosting, email, cloud storage, security, forms and business communications.",
+          "Because members of our authorised team and certain service providers may be located outside the United Kingdom, including in India, personal information may be accessed internationally. Where required, we use appropriate contractual and organisational safeguards to protect the information."
+        ]
+      },
+      {
+        heading: "Cookies",
+        paragraphs: [
+          "We may use cookies or similar technologies that are strictly necessary for website security and functionality.",
+          "Where we use optional analytics, marketing or tracking technologies, we will request consent where required and provide appropriate cookie controls."
+        ]
       },
       {
         heading: "Data Retention",
-        paragraphs: ["We retain submitted data only for as long as necessary to fulfill the enquiry or interaction."]
+        paragraphs: [
+          "We keep personal information only for as long as reasonably necessary.",
+          "General enquiries and prospective customer information will normally be retained for up to three years after the last meaningful interaction, unless a longer period is required for legal, contractual or accounting purposes."
+        ]
       },
       {
-        heading: "Information Security",
-        paragraphs: ["We secure information you provide on computer servers in a controlled, secure environment, protected from unauthorized access, use, or disclosure. We keep reasonable administrative, technical, and physical safeguards to protect against unauthorized access, use, modification, and personal data disclosure in its control and custody. However, no data transmission over the Internet or wireless network can be guaranteed."]
+        heading: "Your Rights",
+        paragraphs: ["Depending on applicable law, you may have the right to:"],
+        bullets: [
+          "Access your personal information",
+          "Correct inaccurate information",
+          "Request deletion or restriction",
+          "Object to certain processing",
+          "Withdraw consent",
+          "Object to direct marketing",
+          "Request data portability in applicable circumstances"
+        ],
+        footer: "To exercise your rights, contact enquiries@uvaproit.com. You may also complain to the UK Information Commissioner’s Office at ico.org.uk."
       },
       {
-        heading: "Cookies and Tracking",
-        paragraphs: ["We do not use cookies or tracking technologies on our website."]
+        heading: "Security",
+        paragraphs: [
+          "We use reasonable technical and organisational measures to protect personal information. However, no internet transmission or electronic storage system can be guaranteed to be completely secure."
+        ]
       },
       {
-        heading: "International Access",
-        paragraphs: ["Our services are based in the United Kingdom, but the website can be accessed globally. We ensure compliance with applicable data protection laws, including GDPR."]
+        heading: "Changes to This Policy",
+        paragraphs: [
+          "We may update this Privacy Policy when our website, products, business operations or legal requirements change. The latest version will always be published on this page."
+        ]
       },
       {
-        heading: "Legal Disclosure",
-        paragraphs: ["We will disclose any information we collect, use or receive if required or permitted by law, such as to comply with a subpoena or similar legal process, and when we believe in good faith that disclosure is necessary to protect our rights, protect your safety or the safety of others, investigate fraud, or respond to a government request."]
-      },
-      {
-        heading: "Contact Information",
-        paragraphs: ["If you would like to contact us to understand more about this Policy or wish to contact us concerning any matter relating to individual rights and your Personal Information, you may send an email to enquiries@uvaproit.com."]
+        heading: "Contact",
+        paragraphs: [
+          "For privacy-related questions, contact: enquiries@uvaproit.com"
+        ]
       }
     ]
   },
   termsAndConditions: {
-    title: "Terms and Conditions",
+    title: "Website Terms of Use",
+    lastUpdated: "24 July 2026",
     intro: [
-      "Welcome to UVA!",
-      "These terms and conditions outline the rules and regulations for the use of UVA Product and IT Services Limited's Website, located at https://uvatechservices.com.",
-      "By accessing this website, we assume you accept these terms and conditions. Do not continue to use uvaproit if you do not agree to take all of the terms and conditions stated on this page."
+      "These Website Terms of Use apply when you access or use https://uvaproit.com.",
+      "The website is operated by UVA Product and IT Services Limited, a company registered in England and Wales (“UVA”, “we”, “us” or “our”).",
+      "The website may also contain information about products, technology and activities developed or supported by our affiliated UVA company and authorised team in India.",
+      "By using this website, you agree to these Terms. If you do not agree, please stop using the website."
     ],
     sections: [
       {
-        heading: "Use of Website",
-        paragraphs: ["Our website provides information about our services, company news, and offers a way for users to contact us. You agree to use the website only for lawful purposes."]
-      },
-      {
-        heading: "No Account Required",
-        paragraphs: ["There is no user account registration required to access or use our website."]
-      },
-      {
-        heading: "Enquiries and Submissions",
-        paragraphs: ["When you submit information via our contact forms:"],
-        bullets: [
-          "You affirm that the information is accurate and submitted voluntarily.",
-          "You agree that we may use your information to contact you regarding your enquiry."
-        ],
-        footer: "No public user-generated content is posted or visible on the site."
-      },
-      {
-        heading: "Intellectual Property",
-        paragraphs: ["All content on this website, including text, graphics, logos, and service descriptions, is the property of UVA Product and IT Services Limited and may not be used without permission."]
-      },
-      {
-        heading: "Limitation of Liability",
-        paragraphs: ["We do our best to ensure the website is accurate and secure, but we make no guarantees and accept no liability for:"],
-        bullets: [
-          "Errors or omissions in content",
-          "Uninterrupted access",
-          "Any damages resulting from the use or misuse of the site"
+        heading: "1. About These Terms",
+        paragraphs: [
+          "These Website Terms of Use apply when you access or use https://uvaproit.com.",
+          "The website is operated by UVA Product and IT Services Limited, a company registered in England and Wales (“UVA”, “we”, “us” or “our”).",
+          "The website may also contain information about products, technology and activities developed or supported by our affiliated UVA company and authorised team in India.",
+          "By using this website, you agree to these Terms. If you do not agree, please stop using the website."
         ]
       },
       {
-        heading: "Modifications",
-        paragraphs: ["We reserve the right to update these terms at any time. Continued use of the website after any changes indicates your agreement to the new terms."]
+        heading: "2. Website Purpose",
+        paragraphs: [
+          "This website provides general information about UVA and its products, including DP360, Pardha and AURA.",
+          "The website allows visitors to:"
+        ],
+        bullets: [
+          "Learn about our products and technology",
+          "Submit business or product enquiries",
+          "Request demonstrations or meetings",
+          "Contact UVA regarding partnerships, careers or other matters"
+        ],
+        footer: "Accessing this website or submitting an enquiry does not automatically create a customer, supplier, partnership, employment or other contractual relationship. Any product or service engagement will be governed by a separate written agreement, proposal, order form or contract identifying the relevant UVA entity."
       },
       {
-        heading: "Governing Law",
-        paragraphs: ["These terms are governed by the laws of England and Wales."]
+        heading: "3. Use of the Website",
+        paragraphs: [
+          "You may use the website only for lawful purposes.",
+          "You must not:"
+        ],
+        bullets: [
+          "Attempt to gain unauthorised access to the website or its systems",
+          "Introduce viruses, malicious code or harmful material",
+          "Interfere with the operation or security of the website",
+          "Use automated systems to excessively scrape or copy website content",
+          "Use the website in a fraudulent, unlawful or misleading manner",
+          "Misrepresent your identity when submitting an enquiry"
+        ],
+        footer: "We may restrict or block access where we reasonably believe the website is being misused."
+      },
+      {
+        heading: "4. Enquiries and Submissions",
+        paragraphs: ["When submitting information through the website, you confirm that:"],
+        bullets: [
+          "The information is accurate to the best of your knowledge",
+          "You are authorised to provide it",
+          "Your submission does not infringe another person’s rights",
+          "Your submission does not contain unlawful or malicious material"
+        ],
+        footer: "We may use the information to respond to your enquiry in accordance with our Privacy Policy. Please do not submit confidential, commercially sensitive or special-category personal information through a general website contact form unless specifically requested."
+      },
+      {
+        heading: "5. Intellectual Property",
+        paragraphs: [
+          "Unless otherwise stated, the website and its content—including text, designs, graphics, software demonstrations, product names, logos, images and other materials—are owned by or licensed to UVA and its affiliated entities.",
+          "You may view and download reasonable portions of the website for your own internal, non-commercial evaluation.",
+          "You must not reproduce, modify, distribute, commercially exploit or publicly display website content without prior written permission.",
+          "“UVA”, “DP360”, “Pardha”, “AURA” and associated branding may be trademarks or protected brand assets of UVA or its affiliated entities."
+        ]
+      },
+      {
+        heading: "6. Product Information and Availability",
+        paragraphs: [
+          "Website content is provided for general information and product-evaluation purposes.",
+          "Product descriptions, features, visuals, timelines, use cases and roadmaps may change as our products evolve.",
+          "Certain capabilities shown or described may be: Available features, Prototype or demonstration capabilities, Features under development, or Planned or future applications.",
+          "Website content does not constitute a binding offer, warranty or commitment that a particular feature, product or deployment will be available.",
+          "Confirmed functionality, pricing, delivery dates, service levels and contractual commitments will be stated only in a separate written agreement."
+        ]
+      },
+      {
+        heading: "7. Accuracy and Availability",
+        paragraphs: [
+          "We take reasonable care to keep website information accurate and current, but we do not guarantee that all content will always be complete, error-free or up to date.",
+          "We may change, suspend or withdraw any part of the website without notice.",
+          "We do not guarantee that the website will always be available, uninterrupted or free from security vulnerabilities."
+        ]
+      },
+      {
+        heading: "8. Third-Party Links",
+        paragraphs: [
+          "The website may contain links to websites, platforms or services operated by third parties.",
+          "These links are provided for convenience only. We do not control and are not responsible for third-party content, availability, security or privacy practices.",
+          "A link does not necessarily mean that UVA endorses or approves the third party."
+        ]
+      },
+      {
+        heading: "9. Limitation of Liability",
+        paragraphs: [
+          "Nothing in these Terms excludes or limits liability where it would be unlawful to do so, including liability for death or personal injury caused by negligence, fraud or fraudulent misrepresentation.",
+          "To the extent permitted by law, UVA will not be liable for losses caused by reliance on general website information, loss of profits, revenue, business, opportunity or anticipated savings, indirect or consequential loss, loss caused by website interruption, malware or third-party services, or loss resulting from unauthorised or improper use of the website.",
+          "These Website Terms do not limit liability arising under a separate written product or service agreement."
+        ]
+      },
+      {
+        heading: "10. Privacy and Cookies",
+        paragraphs: [
+          "Our collection and use of personal information is explained in our Privacy Policy.",
+          "Information about cookies and similar technologies is also provided in the Privacy Policy or through the website’s cookie controls, where applicable."
+        ]
+      },
+      {
+        heading: "11. Changes to These Terms",
+        paragraphs: [
+          "We may update these Terms to reflect changes to our website, products, business operations or legal requirements.",
+          "The updated Terms will be published on this page with a revised “Last updated” date."
+        ]
+      },
+      {
+        heading: "12. Governing Law",
+        paragraphs: [
+          "These Terms are governed by the laws of England and Wales.",
+          "The courts of England and Wales will have jurisdiction over disputes relating to these Terms, subject to any mandatory rights that apply under applicable law."
+        ]
+      },
+      {
+        heading: "13. Contact",
+        paragraphs: [
+          "Questions regarding these Terms may be sent to: UVA Product and IT Services Limited",
+          "Email: enquiries@uvaproit.com",
+          "Company number: 15807431",
+          "Registered office: Park House, 37 Clarence Street, Leicester, Leicestershire, England, LE1 3RW"
+        ]
       }
     ]
   },

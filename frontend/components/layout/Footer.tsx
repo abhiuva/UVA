@@ -188,7 +188,7 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="mt-20 border-t border-foreground/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-6 font-body">
           <p className="text-xs text-muted font-medium">
-            &copy; {new Date().getFullYear()} {CONTENT.footer.copyright.replace(/© \d{4} /, '')}
+            &copy; 2024 {CONTENT.footer.copyright.replace(/© \d{4} /, '')}
           </p>
           
           <div className="flex flex-wrap justify-center gap-x-8 gap-y-4">
